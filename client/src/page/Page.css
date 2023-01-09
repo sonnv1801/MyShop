@@ -1,0 +1,9 @@
+.padding-home-page {
+    padding: 0px 120px;
+}
+
+@media only screen and (max-width: 430px) {
+    .mb-padding-home-page {
+        padding: 0px;
+    }
+}

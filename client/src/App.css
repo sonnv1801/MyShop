@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.link {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.link:hover {
+    color: #fff;
+}
+
+/* nav */
+.toolbar__navigation {
+    display: flex;
+    margin-top: 14px;
+    /* background: pink; */
+}
+
+.toolbar__navigation li {
+    list-style: none;
+    /* background: red; */
+    margin-left: 20px;
+    min-width: 50px;
+}
+
+
+/* SHOP PAGE */  /* date create: 30/9/2022  */
+.wrap_shop {
+    margin-top: 64px;
+}
+.body_shop {
+    /* background: pink; */
+    padding: 0;
+    width: 1140px;
+}
+/* shop responesive */
+@media only screen and (min-width: 900px) and (max-width: 1115px) {
+    /* .body_shop {
+        background: red;
+    } */
+    .ff {
+        width: 31%;
+    }
+    .ff2 {
+        width: 69%;
+    }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    /* .body_shop {
+        background: blue;
+    } */
+    .ff {
+        width: 40%;
+    }
+    .ff2 {
+        width: 60%;
+    }
+}
+
+/* Cả Mobile & tablet: width < 1024px */
+@media only screen and (max-width: 764px) {
+    .body_shop {
+        /* background: green; */
+        max-width: 100%;
+        padding: 0 20px 0 20px;
+    }
+    .ff {
+        width: 100%;
+    }
+    .ff2 {
+        width: 100%;
+    }
+}
+
+
+
+
+/* detail page *////////////////////////////////////////////////////////////////////////////////////////
+.wrap__detail__product {
+    padding-top: 90px;
+}
+.content__product__detail { 
+    width: 90%;
+    margin: auto;
+}
+.wrap__groupButton__detail {
+    display: flex;
+    width: 100%;
+}
+.wrap__groupButton__detail div {
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+}
+.wrap__groupButton__detail .button__buy__now {
+    margin-left: 10px;
+    border: 2px #666666 solid;
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.wrap__groupButton__detail .button__add__card {
+    display: flex;
+    border: 2px #009e7f solid;
+    display: flex;
+    color: #009e7f;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+/*  */
+.more__information__detail {
+    margin-top: 40px;
+}
+.info-product-detail {
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+.info-product-detail .info-content-detail {
+    width: 77%;
+}
+.info-product-detail .aa {
+    width: 23%;
+}
+.group__img__mortDetailInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*  */
+.button__check__shop {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background: #009e7f;
+    margin-top: 10px;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+.box__support__online {
+    width: 100%;
+    height: 100%;
+    border-top: 2px red solid;
+    border-bottom: 1px #F7F7F7 solid;
+    border-left: 1px #F7F7F7 solid;
+    border-right: 1px #F7F7F7 solid;
+}
+.box__support__online {
+    padding: 20px 20px 20px 20px;
+}
+.box__support__online p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+.CS {
+    width: 100%;
+    height: 100%;
+    background-color: #009E7F;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+.cs {
+    padding: 15px 10px 0px;
+}
+.cs div{
+    color: #fff;
+    height: 100%;
+    background: orange;
+}
+
+
+
+
+
+/* responsive */
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+    .header-home-page {
+        width: 99%;
+    }
+
+    .list-group-item-action {
+        width: 100%;
+        height: auto;
+    }
+    .box-list-product-header-home {
+        flex-direction: column; /* xếp thành cột */
+    }
+    .box-list-item-header-home {
+        flex-direction: column;
+        height: 600px;
+    }
+    .item-header-home1 {
+        margin-right: 0;
+        height: 300px;
+        margin-top: 30px;
+    }
+    .item-header-home2 {
+        height: 200px;
+        margin-top: 10px;
+    }
+    .item-header-home3 {
+        height: 90px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .box-carosel-main-header-home {
+        display: none;
+    }
+}
+
+
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .header-home-page {
+        width: 99%;
+    }
+    .list-group-item-action {
+        font-size: 11px;
+        height: auto;
+    }
+}
+
+/* Cả Mobile & tablet: width < 1024px */
+@media only screen and (max-width: 63.9375em) {
+}

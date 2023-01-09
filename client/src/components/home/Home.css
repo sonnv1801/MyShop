@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+
+/* Header Home */
+.header-home-page {
+    width: 90%;
+    padding-top: 70px;
+    margin: auto;
+}
+
+.box__trademark {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box__trademark div {
+    width: 200px;
+    height: 80px;
+    background: pink;
+}
+
+.box-list-product-header-home {
+    display: flex;
+    width: 100%;
+}
+
+.box-carosel-header-home {
+    flex: 3;
+}
+
+.carosel-main-header-home {
+    background-image: url("https://smartfashion.ai/wp-content/uploads/2020/11/phoi-do-voi-ao-form-rong-nam.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 424px;
+    margin-top: 10px;
+}
+
+.list-group-item-action {
+    width: 90%;
+    height: 45px;
+    background: #fff;
+    color: rgb(17, 17, 17);
+    font-size: 13px;
+    position: relative;
+    z-index: 1;
+    line-height: 30px;
+}
+
+.list-group-item-action:hover {
+    background-color: rgb(224, 168, 26);
+}
+
+.list-group {
+    flex: 1;
+}
+
+/*  */
+.input-seach-header-home {
+    width: 50%;
+    height: 50px;
+    outline: 0;
+    /* bỏ đi viền của input */
+    border: 1px solid rgb(221, 223, 219);
+}
+
+.button-search-header-home {
+    height: 50px;
+    width: 17%;
+    color: #fff;
+    background: rgb(144, 196, 60);
+    border: none;
+}
+
+.hideClassList {
+    display: none;
+}
+
+/* Body Home */
+.body__home__page {
+    width: 100%;
+}
+
+.wrapper__content__home {
+    width: 90%;
+    margin: auto;
+}
+
+.img__Featured {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.img__Featured .card {
+    width: 390px;
+    border-radius: 0;
+
+    /* style={{ width: '360px', borderRadius: '0px' }} */
+}
+
+
+.list-products-body-home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* / */
+
+.box-list-item-header-home {
+    display: flex;
+}
+
+.item-header-home1 {
+    height: 170px;
+    background-image: url("https://cf.shopee.vn/file/8dbe66d8aa9bbb96273fe98715bee5f8");
+    flex: 1;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.item-header-home2 {
+    height: 170px;
+    background-image: url("https://cf.shopee.vn/file/35bab12a21692743e95a8b6d4feda4cd_tn");
+    flex: 1;
+    margin-top: 30px;
+}
+
+.item-header-home3 {
+    height: 170px;
+    background-image: url("https://cbu01.alicdn.com/img/ibank/O1CN01Qyb7jC2FOyA7akblk_!!2208857268871-0-cib.jpg_720x720q75.jpg");
+    flex: 1;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+
+
+/* responsive */
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+    .header-home-page {
+        width: 99%;
+    }
+
+    .list-group-item-action {
+        width: 100%;
+        height: auto;
+    }
+
+    .box-list-product-header-home {
+        flex-direction: column;
+        /* xếp thành cột */
+    }
+
+    .box-list-item-header-home {
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .item-header-home1 {
+        margin-right: 0;
+        height: 300px;
+        margin-top: 30px;
+    }
+
+    .item-header-home2 {
+        height: 200px;
+        margin-top: 10px;
+    }
+
+    .item-header-home3 {
+        height: 90px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .box-carosel-main-header-home {
+        display: none;
+    }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .header-home-page {
+        width: 99%;
+    }
+
+    .list-group-item-action {
+        font-size: 11px;
+        height: auto;
+    }
+}
+
+/* Cả Mobile & tablet: width < 1024px */
+@media only screen and (max-width: 63.9375em) {}
+
+
+
+/*Nguyen Van Son*/
+
+/* Css banner HomePage */
+.image-parents {
+    position: relative;
+}
+
+.image-parents .content {
+    width: 436px;
+    position: absolute;
+    left: 100px;
+    top: 200px;
+}
+
+.image-parents .content b {
+    display: block;
+    font-family: 'Lora', serif;
+    font-size: 50px
+}
+
+.image-parents .content i {
+    display: block;
+    font-family: 'Lora', serif;
+    text-align: justify;
+    color: white;
+    letter-spacing: 0.6;
+
+}
+
+.image-parents .content .button-banner {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%) !important;
+    box-shadow: 0 10px 20px rgb(255 108 0 / 20%);
+}
+
+
+/* Css banner serviceHome */
+
+.serviceHome {
+    font-family: 'Lora', serif;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+    margin-left: 20px;
+    width: 97.6%;
+}
+
+.serviceHome .body-service-home {
+    border-right-width: 0.5px;
+    border-right-style: solid;
+    border-right-color: gray;
+}
+
+.serviceHome .body-service-home .body-service-home-last-one {
+    border: none;
+}
+
+.serviceHome .serviceHome-parents {
+    padding: 50px 50px;
+}
+
+.serviceHome .serviceHome-parents i .icon-service-home {
+    font-size: 40px !important;
+}
+
+.serviceHome .serviceHome-parents i {
+    display: block;
+    right: 50%;
+}
+
+
+/* Css Deal */
+
+.Deal {
+    margin-top: 5.2rem;
+    margin-left: 0.8rem;
+}
+
+.Deal img {
+    width: 100%;
+    padding: 7px;
+}
+
+.Deal img:hover {
+    opacity: 0.8;
+}
+
+.Deal .body-deal {
+    position: relative;
+}
+
+.Deal .body-deal p {
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    display: none;
+    animation: content both 1s;
+}
+
+.body-deal:hover p {
+    display: block;
+
+}
+
+@keyframes content {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* title home */
+
+.container-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    position: relative;
+    animation: modalFadeIn infinite .5s;
+}
+
+.container-title p {
+    display: inline-block;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ff6c00;
+}
+
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-10);
+    }
+}
+
+
+/* Product Home */
+
+.product-home {
+    margin-top: 3.1rem;
+    width: 97.6%;
+    margin-left: 20px;
+}
+
+.product-home .card-image {
+    height: 100%;
+}
+
+.product-home b {
+    /* text-align: center; */
+    color: #ff6c00;
+    display: block;
+}
+
+.product-home p,
+del {
+    display: inline-block;
+}
+
+.product-home p {
+    padding: 10px 20px 0 0px;
+}
+
+.product-home del {
+    color: gray;
+    opacity: 0.5;
+}
+
+/* Css DealSoon */
+
+.deal-soon {
+    margin-top: 6rem;
+    text-align: center;
+
+}
+
+.deal-soon .body-deal-soon h3 {
+    text-transform: uppercase;
+    color: orange;
+    font-family: 'Lora', serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.deal-soon .body-deal-soon p {
+    display: block;
+    font-weight: 300;
+    font-family: 'Lora', serif;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    letter-spacing: .9px;
+
+}
+
+.deal-soon .body-deal-soon .watch-soon {
+    width: 97.6%;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+    /* line-height: 75px; */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.deal-soon .body-deal-soon .watch-soon .watch {
+    padding: 20px 20px;
+}
+
+.deal-soon .body-deal-soon .watch-soon .watch .col-watch {
+    border-right-width: 0.5px;
+    border-right-style: solid;
+    border-right-color: gray;
+}
+
+.deal-soon .body-deal-soon .watch-soon .watch b {
+    font-size: 25px;
+}
+
+.deal-soon .body-deal-soon .watch-soon .watch span {
+    display: block;
+    font-family: 'Lora', serif;
+
+}
+
+.deal-soon .body-deal-soon .btn-deal-soon {
+    background-color: #ff6c00;
+    width: 20%;
+    height: 50px;
+    border-radius: 50px;
+    margin-top: 36px;
+}
+
+.deal-soon .body-deal-soon a {
+    text-decoration: none;
+}
+
+
+/* Css Brand Home */
+
+.brand {
+    text-align: center;
+    margin-top: 5.5rem;
+}
+
+.brand .body-brand img {
+    opacity: 0.1;
+}
+
+.brand .body-brand img:hover {
+    opacity: 1;
+    transform: 1s;
+    cursor: pointer;
+}
+
+
+/* Reposive Home Page */
+/* table and mobile */
+@media only screen and (max-width: 430px) {
+
+    /* Banner */
+    .mb-banner {
+        object-fit: cover;
+        margin-top: 56px !important;
+
+    }
+
+    .mb-banner .mb-banner-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mb-banner .content {
+        left: 22px;
+        top: 39px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .mb-banner .content b {
+        font-size: 36px;
+        color: aquamarine;
+    }
+
+    .mb-banner .content i {
+        font-size: 12px;
+        text-align: center;
+        color: tomato
+    }
+
+    .mb-banner .content .mb-button-banner {
+        font-size: 12px !important;
+        color: black;
+    }
+
+    /* serviceHome */
+    .mb-service-home {
+        margin-left: 0px;
+        width: 100%;
+        border: none;
+
+    }
+
+    .mb-service-home .mb-service-home-parents {
+        padding: 0px;
+    }
+
+    .mb-service-home .mb-service-home-parents .mb-body-service {
+        border: none;
+        padding: 5px;
+    }
+
+    /* Deal */
+
+    .mb-deal {
+        margin: 0px;
+        margin-top: 41px;
+    }
+
+    .mb-deal .mb-body-deal img {
+        padding: 10px;
+    }
+
+    .mb-deal .mb-deal-other img {
+        width: 100% !important;
+    }
+
+    /* Title-Home */
+
+    .mb-title-home {
+        margin-top: 2rem;
+    }
+
+
+    .mb-title-home p {
+        font-size: 26px;
+    }
+
+    /* Product-Home */
+    .mb-produt-home {
+        margin-top: 2rem;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    img.slick-arrow.slick-prev {
+        display: none !important;
+    }
+
+    img.slick-arrow.slick-next {
+        display: none !important;
+    }
+
+
+    /* Deal Soon */
+
+    .mb-deal-soon {
+        margin-top: 3rem;
+    }
+
+    .mb-deal-soon .md-body-deal .mb-watch-soon {
+        width: 100%;
+        height: 100%;
+        margin-left: 0px;
+    }
+
+    .mb-deal-soon .md-body-deal .mb-watch-soon .watch .mb-col-watch {
+        border: none;
+    }
+
+    .mb-deal-soon .md-body-deal .md-btn-deal {
+        width: 100%;
+        margin-top: 11px;
+    }
+
+    /* Barnd Home */
+
+    .md-brand-home {
+        margin-top: 2rem;
+    }
+
+    .md-brand-home .mb-body-brand {
+        padding: 15px;
+    }
+}
