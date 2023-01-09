@@ -15,7 +15,6 @@ import Shop from './page/Shop';
 import Blog from './page/Blog';
 import NotFound from './page/NotFound';
 import useEth from './store/context/EthContext/useEth';
-import Testblockchain from './components/Testblockchain';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -70,7 +69,6 @@ function App() {
               element={user ? <DetailProduct /> : <Navigate to="/login" />}
             />
             <Route path="*" element={<NotFound />} />
-            <Route path="/test-blockhain" element={<Testblockchain />} />
           </Routes>
           <Footer />
         </Router>
