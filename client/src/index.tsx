@@ -7,18 +7,15 @@ import reportWebVitals from './reportWebVitals';
 // use Redux
 import { Provider } from 'react-redux';
 import store from './store/redux/Store';
-import EthProvider from './store/context/EthProvider';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <Provider store={store}>
-    <EthProvider>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </EthProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   </Provider>
 );
 

@@ -39,7 +39,7 @@
 .wrap_footer_app {
     min-height: 480px;
     background: #222222;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     padding-top: 90px;
 }
 

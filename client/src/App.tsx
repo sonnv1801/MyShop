@@ -21,6 +21,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import { AuthContextProvider } from './store/context/AuthContext';
 import Protected from './components/Protected';
 import Profile from './page/Profile';
+import { Login } from './components/login/Login';
+import { Registration } from './components/registration/Registration';
 
 export interface StateStore {
   userLogin: {
@@ -35,7 +37,6 @@ export interface StateStore {
 function App() {
   const [user, setUser] = useState(true);
   const getuser = useSelector((state: StateStore) => state.userLogin.userInfo);
-  const { state } = useEth();
 
   useEffect(() => {
     if (getuser === null && getuser === undefined) {
@@ -60,8 +61,8 @@ function App() {
               }
             />
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={'Login'} />
-            <Route path="/register" element={'regiter'} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Registration />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/blog" element={<Blog />} />
             <Route
