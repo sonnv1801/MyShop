@@ -35,16 +35,16 @@ export interface StateStore {
 }
 
 function App() {
-  const [user, setUser] = useState(true);
-  const getuser = useSelector((state: StateStore) => state.userLogin.userInfo);
+  // const [user, setUser] = useState(true);
+  // const getuser = useSelector((state: StateStore) => state.userLogin.userInfo);
 
-  useEffect(() => {
-    if (getuser === null && getuser === undefined) {
-      setUser(false);
-    } else {
-      setUser(true);
-    }
-  }, [getuser, user]);
+  // useEffect(() => {
+  //   if (getuser === null && getuser === undefined) {
+  //     setUser(false);
+  //   } else {
+  //     setUser(true);
+  //   }
+  // }, [getuser, user]);
 
   return (
     <div className="App">
@@ -65,10 +65,10 @@ function App() {
             <Route path="/register" element={<Registration />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/blog" element={<Blog />} />
-            <Route
+            {/* <Route
               path="/detail-product/:productId"
               element={user ? <DetailProduct /> : <Navigate to="/login" />}
-            />
+            /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

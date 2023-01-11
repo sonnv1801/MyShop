@@ -19,7 +19,6 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { StateStore } from '../App';
 import { logout } from '../store/redux/actions/userActions';
 import { useDispatch } from 'react-redux';
@@ -29,6 +28,8 @@ import Logo from '../assets/images/logoweb.png';
 import { UserAuth } from '../store/context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+
+import { useSelector } from 'react-redux';
 
 interface Props {
   /**
@@ -97,7 +98,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function HideAppBar(props: Props) {
-  const getuser = useSelector((state: StateStore) => state.userLogin.userInfo);
+  // const getuser = useSelector((state: StateStore) => state.userLogin.userInfo);
   const dispatch = useDispatch();
   const logAutPromise = logout();
 
@@ -106,6 +107,8 @@ export default function HideAppBar(props: Props) {
     logAutPromise(dispatch);
     // dispatch(logout())
   };
+
+  const user = useSelector((state: any) => state.auth.login.currentUser);
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
@@ -148,7 +151,7 @@ export default function HideAppBar(props: Props) {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      {getuser ? (
+      {user ? (
         <>
           <Link to="/profile">
             <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
@@ -170,22 +173,22 @@ export default function HideAppBar(props: Props) {
     </Menu>
   );
 
-  const { user, logOut } = UserAuth();
-  const navigate = useNavigate();
+  // const { user, logOut } = UserAuth();
+  // const navigate = useNavigate();
 
-  const handleSignOut = async () => {
-    try {
-      await logOut();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const handleSignOut = async () => {
+  //   try {
+  //     await logOut();
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    if (user != null) {
-      navigate('/');
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user != null) {
+  //     navigate('/');
+  //   }
+  // }, [user]);
 
   const renderMenu1 = (
     <div>
@@ -204,7 +207,7 @@ export default function HideAppBar(props: Props) {
         open={isMenuOpen}
         onClose={handleMenuClose}
       >
-        {user?.displayName ? (
+        {/* {user?.displayName ? (
           <>
             <Link to="/profile">
               <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
@@ -216,6 +219,26 @@ export default function HideAppBar(props: Props) {
             <MenuItem>
               <img src={user?.photoURL} alt={user?.displayName} />
             </MenuItem>
+          </>
+        ) : (
+          <>
+            <Link to="/login">
+              <MenuItem>Đăng Nhập</MenuItem>
+            </Link>
+
+            <Link to="/register">
+              <MenuItem onClick={handleMenuClose}>Đăng Ký</MenuItem>
+            </Link>
+          </>
+        )} */}
+        {user ? (
+          <>
+            <Link to="/profile">
+              <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+            </Link>
+
+            <MenuItem>Đăng xuất</MenuItem>
+            <MenuItem>Hi,{user.username}</MenuItem>
           </>
         ) : (
           <>
@@ -394,25 +417,25 @@ export default function HideAppBar(props: Props) {
                   onClick={handleProfileMenuOpen}
                   color="inherit"
                 >
-                  {getuser ? (
-                    <>
-                      <p style={{ fontSize: '13px', margin: 'auto' }}>
-                        Hello! {getuser.name}
-                      </p>
-                      <img
-                        style={{
-                          width: '30px',
-                          height: '30px',
-                          borderRadius: '50%',
-                          marginLeft: '7px',
-                        }}
-                        src="https://f.gxx.garenanow.com/download/0444f087923f4eae52c109cc83db28a50403010000002ab90000000002010044"
-                        alt=""
-                      />
-                    </>
-                  ) : (
-                    <AccountCircle />
-                  )}
+                  {/* {getuser ? ( */}
+                  <>
+                    <p style={{ fontSize: '13px', margin: 'auto' }}>
+                      {/* Hello! {getuser.name} */}
+                    </p>
+                    <img
+                      style={{
+                        width: '30px',
+                        height: '30px',
+                        borderRadius: '50%',
+                        marginLeft: '7px',
+                      }}
+                      src="https://f.gxx.garenanow.com/download/0444f087923f4eae52c109cc83db28a50403010000002ab90000000002010044"
+                      alt=""
+                    />
+                  </>
+                  {/* ) : ( */}
+                  <AccountCircle />
+                  {/* )} */}
                 </IconButton>
               </Box>
               <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
