@@ -26,10 +26,13 @@ import { useDispatch } from 'react-redux';
 import Logo from '../assets/images/logoweb.png';
 
 import { UserAuth } from '../store/context/AuthContext';
-import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 import { useSelector } from 'react-redux';
+import { logOut } from '../redux/apiRequest';
+import { createAxios } from '../createInstance';
+import { logOutSuccess } from '../redux/authSlice';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
   /**
@@ -99,17 +102,28 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function HideAppBar(props: Props) {
   // const getuser = useSelector((state: StateStore) => state.userLogin.userInfo);
-  const dispatch = useDispatch();
-  const logAutPromise = logout();
 
   /* handle log out */
-  const handleLogout = () => {
-    logAutPromise(dispatch);
-    // dispatch(logout())
-  };
+  // const handleLogout = () => {
+  //   logAutPromise(dispatch);
+  //   // dispatch(logout())
+  // };
 
   const user = useSelector((state: any) => state.auth.login.currentUser);
+  const admin = useSelector(
+    (state: any) => state.auth.login.currentUser?.admin
+  );
 
+  const accessToken = user?.accessToken;
+  const id = user?._id;
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  let axiosJWT = createAxios(user, dispatch, logOutSuccess);
+
+  const handleLogout = () => {
+    logOut(dispatch, id, navigate, accessToken, axiosJWT);
+  };
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     React.useState<null | HTMLElement>(null);
@@ -237,7 +251,7 @@ export default function HideAppBar(props: Props) {
               <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
             </Link>
 
-            <MenuItem>Đăng xuất</MenuItem>
+            <MenuItem onClick={handleLogout}>Đăng xuất</MenuItem>
             <MenuItem>Hi,{user.username}</MenuItem>
           </>
         ) : (
@@ -250,6 +264,14 @@ export default function HideAppBar(props: Props) {
               <MenuItem onClick={handleMenuClose}>Đăng Ký</MenuItem>
             </Link>
           </>
+        )}
+
+        {admin ? (
+          <MenuItem>
+            <Link to="/admin">Hi, Admin</Link>
+          </MenuItem>
+        ) : (
+          ``
         )}
       </Menu>
     </div>
@@ -367,6 +389,11 @@ export default function HideAppBar(props: Props) {
                       Shop
                     </Link>
                   </li>
+                  <li>
+                    <Link className="link" to="/user">
+                      Users
+                    </Link>
+                  </li>
 
                   <li>
                     <Link className="link" to="/blog">
@@ -422,16 +449,16 @@ export default function HideAppBar(props: Props) {
                     <p style={{ fontSize: '13px', margin: 'auto' }}>
                       {/* Hello! {getuser.name} */}
                     </p>
-                    <img
+                    {/* <img
                       style={{
                         width: '30px',
                         height: '30px',
                         borderRadius: '50%',
                         marginLeft: '7px',
                       }}
-                      src="https://f.gxx.garenanow.com/download/0444f087923f4eae52c109cc83db28a50403010000002ab90000000002010044"
+                      src=""
                       alt=""
-                    />
+                    /> */}
                   </>
                   {/* ) : ( */}
                   <AccountCircle />

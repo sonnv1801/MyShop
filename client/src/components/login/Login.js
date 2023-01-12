@@ -2,11 +2,18 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginUser } from '../../redux/apiRequest';
 import '.././Login&Registration.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const msgerr = useSelector((state) => state.auth.login.error);
+
+  if (msgerr === true) {
+    console.log('Loi');
+  } else {
+    console.log('Dang nhap thanh cong');
+  }
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -21,6 +28,7 @@ export const Login = () => {
   return (
     <div className="container-fluid login-parent">
       <div className="form-box">
+        <p>{msgerr === false ? `` : `loi r`}</p>
         <h1>Đăng Nhập</h1>
         <form onSubmit={handleLogin}>
           <div className="input-groupd">

@@ -23,6 +23,8 @@ import Protected from './components/Protected';
 import Profile from './page/Profile';
 import { Login } from './components/login/Login';
 import { Registration } from './components/registration/Registration';
+import { HomeAdmin } from './page/admin/HomeAdmin';
+import { PageUser } from './page/admin/PageUser';
 
 export interface StateStore {
   userLogin: {
@@ -45,34 +47,47 @@ function App() {
   //     setUser(true);
   //   }
   // }, [getuser, user]);
-
+  const user = useSelector((state: any) => state.auth.login.currentUser?.admin);
   return (
     <div className="App">
       <AuthContextProvider>
-        <Router>
-          <NavBar children={undefined} />
-          <Routes>
-            <Route
-              path="/profile"
-              element={
-                <Protected>
-                  <Profile />
-                </Protected>
-              }
-            />
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Registration />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/blog" element={<Blog />} />
-            {/* <Route
+        {user ? (
+          <Router>
+            <NavBar children={undefined} />
+            <Routes>
+              <Route path="/" element={<HomeAdmin />} />
+              <Route path="/user" element={<PageUser />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Registration />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Router>
+        ) : (
+          <Router>
+            <NavBar children={undefined} />
+            <Routes>
+              <Route
+                path="/profile"
+                element={
+                  <Protected>
+                    <Profile />
+                  </Protected>
+                }
+              />
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Registration />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/blog" element={<Blog />} />
+              {/* <Route
               path="/detail-product/:productId"
               element={user ? <DetailProduct /> : <Navigate to="/login" />}
             /> */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <Footer />
-        </Router>
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <Footer />
+          </Router>
+        )}
       </AuthContextProvider>
     </div>
   );
