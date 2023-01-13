@@ -19,13 +19,13 @@ const userSlice = createSlice({
       state.users.allUsers = action.payload;
     },
     getUsersFailed: (state) => {
-      state.users.isFetching = true;
+      state.users.isFetching = false;
       state.users.error = true;
     },
     deleteUserStart: (state) => {
       state.users.isFetching = true;
     },
-    deleteUserSuccess: (state, action) => {
+    deleteUsersSuccess: (state, action) => {
       state.users.isFetching = false;
       state.msg = action.payload;
     },
@@ -42,7 +42,7 @@ export const {
   getUsersSuccess,
   getUsersFailed,
   deleteUserStart,
-  deleteUserSuccess,
+  deleteUsersSuccess,
   deleteUserFailed,
 } = userSlice.actions;
 

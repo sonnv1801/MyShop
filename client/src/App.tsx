@@ -5,6 +5,7 @@ import {
   Routes,
   Route,
   Navigate,
+  useNavigate,
 } from 'react-router-dom';
 import Home from './page/Home';
 import NavBar from './components/NavBar';
@@ -37,6 +38,7 @@ export interface StateStore {
 }
 
 function App() {
+  const user = useSelector((state: any) => state.auth.login?.currentUser);
   // const [user, setUser] = useState(true);
   // const getuser = useSelector((state: StateStore) => state.userLogin.userInfo);
 
@@ -47,11 +49,10 @@ function App() {
   //     setUser(true);
   //   }
   // }, [getuser, user]);
-  const user = useSelector((state: any) => state.auth.login.currentUser?.admin);
   return (
     <div className="App">
       <AuthContextProvider>
-        {user ? (
+        {user?.admin ? (
           <Router>
             <NavBar children={undefined} />
             <Routes>

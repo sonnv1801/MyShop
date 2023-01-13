@@ -29,16 +29,14 @@ const imgBrand = [
 
 export const BrandArea = () => {
   return (
-    <Container className="brand md-brand-home">
-      <Row>
+    <div className="brand">
+      <div className="row">
         {imgBrand.map((imgdata) => (
-          <Col xl={3} key={imgdata.id}>
-            <div className="body-brand mb-body-brand">
-              <img src={imgdata.img} alt={imgdata.img} />
-            </div>
-          </Col>
+          <div className="col-xl-3 col-md-4 col-sm-6">
+            <img key={imgdata.id} src={imgdata.img} alt={imgdata.img} />
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 };

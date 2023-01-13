@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './Home.css';
 
 export const TitleHome = (props: any) => {

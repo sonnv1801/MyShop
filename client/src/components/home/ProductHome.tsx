@@ -3,38 +3,73 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import LeftArrow from '../../assets/images/left-arrow1.png';
-import RightArrow from '../../assets/images/right-arrow1.png';
-import Container from 'react-bootstrap/Container';
-
 import './Home.css';
-import CardProduct from '../CardProduct';
 
-export default function ProductHome(props: any) {
-  console.log(props.product, 'san pham');
-  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }: any) => (
-    <img className="ok" src={LeftArrow} alt="prevArrow" {...props} />
-  );
+const products = [
+  {
+    id: 1,
+    name: 'ADDIDAS NEW HAMMER SOLE FOR SPORTS PERSON',
+    price: '$150.00',
+    oldprice: '$250.00',
+    imgPath:
+      'https://vinfruits.com/wp-content/uploads/2022/05/dd013c305e759e2bc764-900x900.jpg',
+  },
+  {
+    id: 2,
+    name: 'ADDIDAS NEW HAMMER SOLE FOR SPORTS PERSON',
+    price: '$150.00',
+    oldprice: '$250.00',
+    imgPath:
+      'https://vinfruits.com/wp-content/uploads/2022/05/dd013c305e759e2bc764-900x900.jpg',
+  },
+  {
+    id: 3,
+    name: 'ADDIDAS NEW HAMMER SOLE FOR SPORTS PERSON',
+    price: '$150.00',
+    oldprice: '$250.00',
+    imgPath:
+      'https://vinfruits.com/wp-content/uploads/2022/05/dd013c305e759e2bc764-900x900.jpg',
+  },
+  {
+    id: 4,
+    name: 'ADDIDAS NEW HAMMER SOLE FOR SPORTS PERSON',
+    price: '$150.00',
+    oldprice: '$250.00',
+    imgPath:
+      'https://vinfruits.com/wp-content/uploads/2022/05/dd013c305e759e2bc764-900x900.jpg',
+  },
+  {
+    id: 5,
+    name: 'ADDIDAS NEW HAMMER SOLE FOR SPORTS PERSON',
+    price: '$150.00',
+    oldprice: '$250.00',
+    imgPath:
+      'https://vinfruits.com/wp-content/uploads/2022/05/dd013c305e759e2bc764-900x900.jpg',
+  },
+  {
+    id: 6,
+    name: 'ADDIDAS NEW HAMMER SOLE FOR SPORTS PERSON',
+    price: '$150.00',
+    oldprice: '$250.00',
+    imgPath:
+      'https://vinfruits.com/wp-content/uploads/2022/05/dd013c305e759e2bc764-900x900.jpg',
+  },
+];
 
-  const SlickArrowRight = ({ currentSlide, slideCount, ...props }: any) => (
-    <img src={RightArrow} alt="nextArrow" {...props} />
-  );
+export default function ProductHome() {
   const settings = {
-    breakpoint: 480,
-    dots: false,
+    dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    initialSlide: 1,
-    prevArrow: <SlickArrowLeft />,
-    nextArrow: <SlickArrowRight />,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: true,
         },
@@ -57,21 +92,23 @@ export default function ProductHome(props: any) {
     ],
   };
   return (
-    <Container className="product-home mb-produt-home">
-      <Slider {...settings}>
-        {props.product
-          ? props.product.map((data: any) => (
-              <CardProduct
-                key={data.id}
-                id={data.id}
-                name={data.name}
-                price={data.price}
-                oldprice={data.oldprice}
-                imgPath={data.imgPath}
-              />
-            ))
-          : null}
-      </Slider>
-    </Container>
+    <>
+      <div className="container-prd">
+        <Slider {...settings}>
+          {products.map((item) => (
+            <div className="card">
+              <div className="card-top">
+                <img src={item.imgPath} alt={item.name} />
+                <h1>{item.name}</h1>
+              </div>
+              <div className="card-bottom">
+                <h3>{item.price}</h3>
+                <span className="category">{item.oldprice}</span>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </>
   );
 }

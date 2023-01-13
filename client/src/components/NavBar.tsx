@@ -109,16 +109,15 @@ export default function HideAppBar(props: Props) {
   //   // dispatch(logout())
   // };
 
-  const user = useSelector((state: any) => state.auth.login.currentUser);
   const admin = useSelector(
     (state: any) => state.auth.login.currentUser?.admin
   );
 
+  const user = useSelector((state: any) => state.auth.login.currentUser);
   const accessToken = user?.accessToken;
   const id = user?._id;
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   let axiosJWT = createAxios(user, dispatch, logOutSuccess);
 
   const handleLogout = () => {

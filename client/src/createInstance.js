@@ -25,7 +25,7 @@ export const createAxios = (user, dispatch, stateSuccess) => {
           accessToken: data.accessToken,
         };
         dispatch(stateSuccess(refreshUser));
-        config.headers['token'] = 'vanson ' + data.accessToken;
+        config.headers['token'] = 'Bearer ' + data.accessToken;
       }
       return config;
     },

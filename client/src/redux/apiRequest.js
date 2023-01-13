@@ -1,4 +1,3 @@
-import { async } from '@firebase/util';
 import axios from 'axios';
 import {
   loginFailed,
@@ -13,12 +12,13 @@ import {
 } from './authSlice';
 import {
   deleteUserFailed,
+  deleteUsersSuccess,
   deleteUserStart,
-  deleteUserSuccess,
   getUsersFailed,
   getUsersStart,
   getUsersSuccess,
 } from './useSlice';
+//npm install axios
 
 export const loginUser = async (user, dispatch, navigate) => {
   dispatch(loginStart());
@@ -26,7 +26,7 @@ export const loginUser = async (user, dispatch, navigate) => {
     const res = await axios.post('http://localhost:8000/v1/auth/login', user);
     dispatch(loginSuccess(res.data));
     navigate('/');
-  } catch (error) {
+  } catch (err) {
     dispatch(loginFailed());
   }
 };
@@ -37,19 +37,19 @@ export const registerUser = async (user, dispatch, navigate) => {
     await axios.post('http://localhost:8000/v1/auth/register', user);
     dispatch(registerSuccess());
     navigate('/login');
-  } catch (error) {
+  } catch (err) {
     dispatch(registerFailed());
   }
 };
 
-export const getAllUsers = async (accessToken, dispatch, axiosJWT) => {
+export const getAllUsers = async (accessToken, dispatch) => {
   dispatch(getUsersStart());
   try {
-    const res = await axiosJWT.get('http://localhost:8000/v1/user', {
-      headers: { token: `vanson ${accessToken}` },
+    const res = await axios.get('http://localhost:8000/v1/user', {
+      headers: { token: `Bearer ${accessToken}` },
     });
     dispatch(getUsersSuccess(res.data));
-  } catch (error) {
+  } catch (err) {
     dispatch(getUsersFailed());
   }
 };
@@ -58,9 +58,9 @@ export const deleteUser = async (accessToken, dispatch, id, axiosJWT) => {
   dispatch(deleteUserStart());
   try {
     const res = await axiosJWT.delete('http://localhost:8000/v1/user/' + id, {
-      headers: { token: `vanson ${accessToken}` },
+      headers: { token: `Bearer ${accessToken}` },
     });
-    dispatch(deleteUserSuccess(res.data));
+    dispatch(deleteUsersSuccess(res.data));
   } catch (err) {
     dispatch(deleteUserFailed(err.response.data));
   }
@@ -69,8 +69,8 @@ export const deleteUser = async (accessToken, dispatch, id, axiosJWT) => {
 export const logOut = async (dispatch, id, navigate, accessToken, axiosJWT) => {
   dispatch(logOutStart());
   try {
-    await axiosJWT.post('http://localhost:8000/v1/auth/logout', id, {
-      headers: { token: `vanson ${accessToken}` },
+    await axios.post('http://localhost:8000/v1/auth/logout', id, {
+      headers: { token: `Bearer ${accessToken}` },
     });
     dispatch(logOutSuccess());
     navigate('/login');
