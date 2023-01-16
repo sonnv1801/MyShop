@@ -59,8 +59,8 @@ function Banner() {
 
   return (
     <Box
-      sx={{ width: '100%', flexGrow: 1, marginTop: '64px' }}
-      className="mb-banner"
+      sx={{ width: '100%', flexGrow: 1 }}
+      className="dt-banner mb-banner sm-banner"
     >
       <Paper
         square
@@ -94,17 +94,6 @@ function Banner() {
                 alt={step.id}
               />
             ) : null}
-            <div className="content">
-              <b>{step.title}</b>
-              <i>{step.content}</i>
-              <Button
-                className="button-banner mb-button-banner"
-                variant="contained"
-                startIcon={<ControlPointIcon />}
-              >
-                Thêm vào túi
-              </Button>
-            </div>
           </div>
         ))}
       </AutoPlaySwipeableViews>

@@ -7,6 +7,8 @@ import BoltIcon from '@mui/icons-material/Bolt';
 import { DealSoon } from '../components/home/DealSoon';
 import { BrandArea } from '../components/home/BrandArea';
 
+import '../components/home/ResponsiveHome.css';
+
 import './Page.css';
 
 const titleHome = {

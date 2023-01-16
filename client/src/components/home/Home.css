@@ -334,7 +334,7 @@
     display: flex;
     justify-content: space-between;
     /* background: blue; */
-    width: 67%;
+    width: 70%;
     margin: auto;
     flex-wrap: wrap;
 }
@@ -538,6 +538,14 @@ span {
     text-align: center;
 }
 
+.brand .brand-title {
+    text-transform: uppercase;
+    color: #777;
+    font-family: 'Lora', serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
 .brand img {
     opacity: 0.6;
     color: #777;
@@ -555,7 +563,7 @@ span {
 @media only screen and (max-width: 430px) {
 
     /* Banner */
-    .mb-banner {
+    /* .mb-banner {
         object-fit: cover;
         margin-top: 56px !important;
 
@@ -587,10 +595,10 @@ span {
     .mb-banner .content .mb-button-banner {
         font-size: 12px !important;
         color: black;
-    }
+    } */
 
     /* serviceHome */
-    .mb-service-home {
+    /* .mb-service-home {
         margin-left: 0px;
         width: 100%;
         border: none;
@@ -604,11 +612,11 @@ span {
     .mb-service-home .mb-service-home-parents .mb-body-service {
         border: none;
         padding: 5px;
-    }
+    } */
 
     /* Deal */
 
-    .mb-deal {
+    /* .mb-deal {
         margin: 0px;
         margin-top: 41px;
     }
@@ -619,21 +627,21 @@ span {
 
     .mb-deal .mb-deal-other img {
         width: 100% !important;
-    }
+    } */
 
     /* Title-Home */
 
-    .mb-title-home {
+    /* .mb-title-home {
         margin-top: 2rem;
     }
 
 
     .mb-title-home p {
         font-size: 26px;
-    }
+    } */
 
     /* Product-Home */
-    .mb-produt-home {
+    /* .mb-produt-home {
         margin-top: 2rem;
         width: 100%;
         margin-left: 0px;
@@ -645,12 +653,12 @@ span {
 
     img.slick-arrow.slick-next {
         display: none !important;
-    }
+    } */
 
 
     /* Deal Soon */
 
-    .mb-deal-soon {
+    /* .mb-deal-soon {
         margin-top: 3rem;
     }
 
@@ -667,15 +675,15 @@ span {
     .mb-deal-soon .md-body-deal .md-btn-deal {
         width: 100%;
         margin-top: 11px;
-    }
+    } */
 
     /* Barnd Home */
 
-    .md-brand-home {
-        margin-top: 2rem;
-    }
+    /* .md-brand-home {
+    margin-top: 2rem;
+}
 
-    .md-brand-home .mb-body-brand {
-        padding: 15px;
-    }
+.md-brand-home .mb-body-brand {
+    padding: 15px;
+} */
 }

@@ -93,7 +93,7 @@ export default function ProductHome() {
   };
   return (
     <>
-      <div className="container-prd">
+      <div className="container-prd md-container-prd">
         <Slider {...settings}>
           {products.map((item) => (
             <div className="card">
