@@ -32,15 +32,15 @@ const service = [
 
 export const ServiceHome = () => {
   return (
-    <Container>
-      <div className="serviceHome mb-service-home">
-        <Container className="serviceHome-parents mb-service-home-parents">
+    <Container data-aos="zoom-in">
+      <div className="serviceHome mb-service-home sm-service-home">
+        <Container className="serviceHome-parents mb-service-home-parents sm-service-home-parents">
           <Row>
             {service.map((step, index) => (
-              <Col sm={12} xl={3} xxl={3}>
+              <Col sm={12} xl={3} md={3} xxl={3}>
                 <div
                   key={step.id}
-                  className="body-service-home mb-body-service"
+                  className="body-service-home body-service-home mb-body-service sm-body-service"
                 >
                   <i>{step.icon}</i>
                   <b>{step.title}</b>
@@ -48,8 +48,8 @@ export const ServiceHome = () => {
                 </div>
               </Col>
             ))}
-            <Col sm={12} xl={3} xxl={3}>
-              <div className="body-service-home-last-one">
+            <Col sm={12} xl={3} md={3} xxl={3}>
+              <div className="body-service-home-last-one md-service-last-one">
                 <i>
                   <PaidIcon className="icon-service-home" />,
                 </i>

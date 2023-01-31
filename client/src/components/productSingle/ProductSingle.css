@@ -1,0 +1,86 @@
+.product-single {
+    margin-top: 100px;
+}
+
+.prd-img .img-body img {
+    width: 100%;
+    margin-bottom: 2rem;
+    border: 1px solid green
+}
+
+.prd-img .img-bottom img {
+    width: 100%;
+    border: 1px solid green;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.prd-img .img-bottom img:hover {
+    opacity: 0.5;
+}
+
+.nav-prd {
+    width: 90%;
+    margin: 0 auto;
+    color: #222;
+    font-weight: 700;
+    letter-spacing: 0px;
+    padding: 0;
+
+}
+
+.nav-prd a {
+    text-decoration: none;
+    color: rgba(102, 102, 102, .7);
+    font-size: 26px;
+    padding: 0 9px;
+    font-weight: 400;
+    font-family: ui-monospace;
+}
+
+.prd-title {
+    padding: 0 1rem;
+}
+
+.prd-title h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.prd-title span {
+    opacity: 0.7;
+    display: block;
+
+}
+
+.prd-title ul {
+    margin-top: 2rem;
+    opacity: 0.7;
+    font-size: 19px;
+    font-family: revert;
+    font-weight: 400;
+}
+
+.prd-title ul li {
+    list-style: decimal;
+}
+
+.prd-title button {
+    display: inline-block;
+    border: none;
+    font-size: 19px;
+    padding: 6px;
+    margin: 0;
+}
+
+.prd-title button:hover {
+    background: gray;
+    color: black;
+}
+
+.prd-title input {
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+}

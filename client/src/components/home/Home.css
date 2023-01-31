@@ -96,8 +96,6 @@
 .img__Featured .card {
     width: 390px;
     border-radius: 0;
-
-    /* style={{ width: '360px', borderRadius: '0px' }} */
 }
 
 
@@ -202,6 +200,11 @@
 /*Nguyen Van Son*/
 
 /* Css banner HomePage */
+
+.css-xuy7os {
+    height: auto !important;
+}
+
 .image-parents {
     position: relative;
 }
@@ -318,6 +321,43 @@
     }
 }
 
+.title-gqct {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.cotainer-gqct {
+    display: flex;
+    justify-content: space-between;
+    /* background: blue; */
+    width: 70%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.cotainer-gqct .body-img {
+    max-width: 363px;
+    /* background: pink; */
+    margin-bottom: 20px;
+
+    overflow: hidden;
+}
+
+.cotainer-gqct .body-img img {
+    width: 100%;
+    transition: transform .6s;
+    transition-duration: .6s;
+}
+
+.cotainer-gqct .body-img img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 /* title home */
 
@@ -326,7 +366,7 @@
     text-transform: uppercase;
     margin-top: 3rem;
     position: relative;
-    animation: modalFadeIn infinite .5s;
+    /* animation: modalFadeIn infinite .5s; */
 }
 
 .container-title p {
@@ -334,7 +374,7 @@
     font-size: 40px;
     text-transform: uppercase;
     font-weight: bold;
-    color: #ff6c00;
+    color: #777;
 }
 
 
@@ -351,36 +391,73 @@
 }
 
 
-/* Product Home */
-
-.product-home {
-    margin-top: 3.1rem;
-    width: 97.6%;
-    margin-left: 20px;
+.container-prd {
+    /* width: 70%; */
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
-.product-home .card-image {
-    height: 100%;
+.slick-slide>div {
+    margin: 0 10px;
 }
 
-.product-home b {
-    /* text-align: center; */
-    color: #ff6c00;
-    display: block;
+.slick-list {
+    margin: 0 -10px;
 }
 
-.product-home p,
-del {
-    display: inline-block;
+.container-prd .card {
+    border: 1px solid #fff;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+
+    height: 400px;
+    color: #fff;
+    cursor: pointer;
 }
 
-.product-home p {
-    padding: 10px 20px 0 0px;
+.container-prd .card-top h1 {
+    font-size: 0.9rem;
+    margin: 20px;
+    color: #777;
 }
 
-.product-home del {
-    color: gray;
-    opacity: 0.5;
+.container-prd .card-top>img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: black;
+    overflow: hidden;
+    transition: transform .6s;
+    transition-duration: .6s;
+}
+
+.container-prd .card-top>img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.container-prd .card-bottom {
+    margin: 10px 20px;
+}
+
+.container-prd .card-bottom h3,
+span {
+    color: #111;
+}
+
+.container-prd .category {
+    position: relative;
+}
+
+.container-prd .category::before {
+    content: '';
+    background: rgb(255, 61, 61);
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    height: 2px;
 }
 
 /* Css DealSoon */
@@ -393,7 +470,7 @@ del {
 
 .deal-soon .body-deal-soon h3 {
     text-transform: uppercase;
-    color: orange;
+    color: #777;
     font-family: 'Lora', serif;
     margin-bottom: 20px;
     font-weight: bold;
@@ -441,7 +518,7 @@ del {
 }
 
 .deal-soon .body-deal-soon .btn-deal-soon {
-    background-color: #ff6c00;
+    background-color: #777;
     width: 20%;
     height: 50px;
     border-radius: 50px;
@@ -456,15 +533,25 @@ del {
 /* Css Brand Home */
 
 .brand {
+    margin: 5.5rem 0;
+    color: #777;
     text-align: center;
-    margin-top: 5.5rem;
 }
 
-.brand .body-brand img {
-    opacity: 0.1;
+.brand .brand-title {
+    text-transform: uppercase;
+    color: #777;
+    font-family: 'Lora', serif;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.brand .body-brand img:hover {
+.brand img {
+    opacity: 0.6;
+    color: #777;
+}
+
+.brand img:hover {
     opacity: 1;
     transform: 1s;
     cursor: pointer;
@@ -476,7 +563,7 @@ del {
 @media only screen and (max-width: 430px) {
 
     /* Banner */
-    .mb-banner {
+    /* .mb-banner {
         object-fit: cover;
         margin-top: 56px !important;
 
@@ -508,10 +595,10 @@ del {
     .mb-banner .content .mb-button-banner {
         font-size: 12px !important;
         color: black;
-    }
+    } */
 
     /* serviceHome */
-    .mb-service-home {
+    /* .mb-service-home {
         margin-left: 0px;
         width: 100%;
         border: none;
@@ -525,11 +612,11 @@ del {
     .mb-service-home .mb-service-home-parents .mb-body-service {
         border: none;
         padding: 5px;
-    }
+    } */
 
     /* Deal */
 
-    .mb-deal {
+    /* .mb-deal {
         margin: 0px;
         margin-top: 41px;
     }
@@ -540,21 +627,21 @@ del {
 
     .mb-deal .mb-deal-other img {
         width: 100% !important;
-    }
+    } */
 
     /* Title-Home */
 
-    .mb-title-home {
+    /* .mb-title-home {
         margin-top: 2rem;
     }
 
 
     .mb-title-home p {
         font-size: 26px;
-    }
+    } */
 
     /* Product-Home */
-    .mb-produt-home {
+    /* .mb-produt-home {
         margin-top: 2rem;
         width: 100%;
         margin-left: 0px;
@@ -566,12 +653,12 @@ del {
 
     img.slick-arrow.slick-next {
         display: none !important;
-    }
+    } */
 
 
     /* Deal Soon */
 
-    .mb-deal-soon {
+    /* .mb-deal-soon {
         margin-top: 3rem;
     }
 
@@ -588,15 +675,15 @@ del {
     .mb-deal-soon .md-body-deal .md-btn-deal {
         width: 100%;
         margin-top: 11px;
-    }
+    } */
 
     /* Barnd Home */
 
-    .md-brand-home {
-        margin-top: 2rem;
-    }
+    /* .md-brand-home {
+    margin-top: 2rem;
+}
 
-    .md-brand-home .mb-body-brand {
-        padding: 15px;
-    }
+.md-brand-home .mb-body-brand {
+    padding: 15px;
+} */
 }

@@ -5,6 +5,7 @@ import {
   Routes,
   Route,
   Navigate,
+  useNavigate,
 } from 'react-router-dom';
 import Home from './page/Home';
 import NavBar from './components/NavBar';
@@ -25,6 +26,7 @@ import { Login } from './components/login/Login';
 import { Registration } from './components/registration/Registration';
 import { HomeAdmin } from './page/admin/HomeAdmin';
 import { PageUser } from './page/admin/PageUser';
+import { ProductSingle } from './page/ProductSingle';
 
 export interface StateStore {
   userLogin: {
@@ -37,6 +39,7 @@ export interface StateStore {
 }
 
 function App() {
+  const user = useSelector((state: any) => state.auth.login?.currentUser);
   // const [user, setUser] = useState(true);
   // const getuser = useSelector((state: StateStore) => state.userLogin.userInfo);
 
@@ -47,11 +50,10 @@ function App() {
   //     setUser(true);
   //   }
   // }, [getuser, user]);
-  const user = useSelector((state: any) => state.auth.login.currentUser?.admin);
   return (
     <div className="App">
       <AuthContextProvider>
-        {user ? (
+        {user?.admin ? (
           <Router>
             <NavBar children={undefined} />
             <Routes>
@@ -79,6 +81,7 @@ function App() {
               <Route path="/register" element={<Registration />} />
               <Route path="/shop" element={<Shop />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/product" element={<ProductSingle />} />
               {/* <Route
               path="/detail-product/:productId"
               element={user ? <DetailProduct /> : <Navigate to="/login" />}
