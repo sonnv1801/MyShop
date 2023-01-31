@@ -66,7 +66,7 @@
     list-style: decimal;
 }
 
-.prd-title button {
+.prd-title .btn-body .button-decimal {
     display: inline-block;
     border: none;
     font-size: 19px;
@@ -74,13 +74,202 @@
     margin: 0;
 }
 
-.prd-title button:hover {
+.prd-title .btn-body {
+    margin: 2rem 0;
+}
+
+.prd-title .btn-body .button-decimal:hover {
     background: gray;
     color: black;
 }
 
-.prd-title input {
+.prd-title .btn-body input {
     display: inline-block;
     width: 10%;
     text-align: center;
+}
+
+.prd-title .btn-add {
+    margin: 0 1rem;
+    color: white;
+    font-weight: bold;
+    background: #dfa232;
+    opacity: 0.8;
+}
+
+.prd-title .btn-add:hover {
+    opacity: 1;
+}
+
+
+.review h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    padding: 5px;
+}
+
+.review ul li {
+    letter-spacing: 1px;
+    text-align: justify;
+    padding: 7px 0;
+    list-style: none;
+    opacity: 0.8;
+    line-height: 30px;
+}
+
+.review span {
+    display: block;
+    padding: 0.7rem 2rem;
+    font-weight: 400;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+
+.review span b {
+    margin-left: 0.3rem;
+    font-weight: bold;
+}
+
+.prd-similar {
+    margin-top: 2rem;
+    padding-left: 1.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.container-prd {
+    margin-bottom: 3rem;
+}
+
+.container-prd .btn-prd-similar {
+    color: white;
+    font-weight: bold;
+    background: #dfa232;
+    opacity: 0.8;
+    margin: 0 0.8rem;
+}
+
+.rate h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.rate span {
+    opacity: 0.8;
+    font-family: sans-serif;
+}
+
+.rate .rate-cotainer {
+    border: 2px solid orange;
+    margin-top: 2rem;
+}
+
+.rate .rate-cotainer .rate-body {
+    padding: 2rem;
+}
+
+.rate .rate-cotainer .rate-body p {
+    margin-top: 1rem;
+    color: #dfa232;
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.rate .rate-cotainer .rate-body .text-rate {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 1rem 0px
+}
+
+.rate .rate-cotainer .rate-body .btn-rate {
+    color: white;
+    font-weight: bold;
+    background: #100c04;
+    opacity: 0.8;
+    width: 100%;
+    border: none;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+
+@media only screen and (max-width: 1200px) {}
+
+
+/* Cả Mobile & tablet: width < 1024px */
+@media only screen and (max-width: 63.9375em) {}
+
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+    .sm-nav-prd {
+        width: 93%;
+        margin-bottom: 1rem;
+    }
+
+    .sm-row-flex {
+        display: flex;
+    }
+
+    .sm-row-flex .sm-body-flex {
+        justify-content: center;
+        max-width: 25%;
+    }
+
+    .sm-prd-title h1 {
+        font-size: 1.5rem;
+        margin-top: 0.6rem;
+    }
+
+    .sm-prd-title .sm-btn-body input {
+        width: 20%;
+    }
+
+    .sm-review-margin {
+        margin-top: 2rem;
+    }
+
+    .sm-review h1 {
+        font-size: 1rem;
+    }
+
+    .sm-review ul {
+        padding: 0;
+    }
+
+    .sm-review span {
+        padding: 10px;
+        display: block;
+    }
+
+    .sm-review span b {
+        display: block;
+        margin: 0;
+    }
+}
+
+/* Table: width > 740px and width < 1024px */
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+    .md-nav-prd {
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    .md-review-margin {
+        margin-top: 2rem;
+    }
 }

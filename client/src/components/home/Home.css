@@ -405,6 +405,10 @@
     margin: 0 -10px;
 }
 
+.container-prd .cart-nav {
+    text-decoration: none;
+}
+
 .container-prd .card {
     border: 1px solid #fff;
     background: #fff;

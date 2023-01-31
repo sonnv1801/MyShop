@@ -1,11 +1,8 @@
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-
+import { Card } from '../Card';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-import './Home.css';
-import { Link } from 'react-router-dom';
-import { Card } from '../Card';
 
 const products = [
   {
@@ -58,13 +55,13 @@ const products = [
   },
 ];
 
-export default function ProductHome() {
+export const ProductSimilar = () => {
   const settings = {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     initialSlide: 0,
     responsive: [
       {
@@ -95,15 +92,19 @@ export default function ProductHome() {
   };
   return (
     <>
-      <div className="container-prd md-container-prd" data-aos="fade-up">
+      <h1 className="prd-similar">Sản phẩm tương tự</h1>
+      <div className="container-prd md-container-prd">
         <Slider {...settings}>
           {products.map((item) => (
-            <Link to="/product" className="cart-nav">
+            <Link to="#" className="cart-nav">
               <Card items={item} />
+              <button type="button" class="btn btn-warning btn-prd-similar">
+                Buy now
+              </button>
             </Link>
           ))}
         </Slider>
       </div>
     </>
   );
-}
+};
