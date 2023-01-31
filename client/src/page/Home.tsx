@@ -8,8 +8,11 @@ import { DealSoon } from '../components/home/DealSoon';
 import { BrandArea } from '../components/home/BrandArea';
 
 import '../components/home/ResponsiveHome.css';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 import './Page.css';
+import { useEffect } from 'react';
 
 const titleHome = {
   id: 1,
@@ -24,6 +27,9 @@ const titleHome1 = {
 };
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+  }, []);
   return (
     <div className="">
       <Banner />

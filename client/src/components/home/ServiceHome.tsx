@@ -32,7 +32,7 @@ const service = [
 
 export const ServiceHome = () => {
   return (
-    <Container>
+    <Container data-aos="zoom-in">
       <div className="serviceHome mb-service-home sm-service-home">
         <Container className="serviceHome-parents mb-service-home-parents sm-service-home-parents">
           <Row>

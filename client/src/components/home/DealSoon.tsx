@@ -9,7 +9,10 @@ import { Link } from 'react-router-dom';
 
 export const DealSoon = () => {
   return (
-    <Container className="deal-soon mb-deal-soon sm-deal-soon">
+    <Container
+      className="deal-soon mb-deal-soon sm-deal-soon"
+      data-aos="zoom-out"
+    >
       <Row>
         <Col xl={12} xxl={12}>
           <div className="body-deal-soon md-body-deal sm-body-deal">

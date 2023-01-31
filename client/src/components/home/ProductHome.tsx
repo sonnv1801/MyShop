@@ -93,7 +93,7 @@ export default function ProductHome() {
   };
   return (
     <>
-      <div className="container-prd md-container-prd">
+      <div className="container-prd md-container-prd" data-aos="fade-up">
         <Slider {...settings}>
           {products.map((item) => (
             <div className="card">

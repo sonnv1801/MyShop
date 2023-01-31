@@ -29,7 +29,7 @@ const imgBrand = [
 
 export const BrandArea = () => {
   return (
-    <div className="brand md-brand sm-brand dt-brand">
+    <div className="brand md-brand sm-brand dt-brand" data-aos="zoom-in">
       <h1 className="brand-title dt-title">Nhà Tài Trợ</h1>
       <div className="row">
         {imgBrand.map((imgdata) => (
