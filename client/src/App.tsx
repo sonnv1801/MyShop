@@ -27,6 +27,7 @@ import { Registration } from './components/registration/Registration';
 import { HomeAdmin } from './page/admin/HomeAdmin';
 import { PageUser } from './page/admin/PageUser';
 import { ProductSingle } from './page/ProductSingle';
+import { Cart } from './page/Cart';
 
 export interface StateStore {
   userLogin: {
@@ -82,6 +83,7 @@ function App() {
               <Route path="/shop" element={<Shop />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/product" element={<ProductSingle />} />
+              <Route path="/cart" element={<Cart />} />
               {/* <Route
               path="/detail-product/:productId"
               element={user ? <DetailProduct /> : <Navigate to="/login" />}
