@@ -262,6 +262,9 @@ export default function HideAppBar(props: Props) {
             <Link to="/register">
               <MenuItem onClick={handleMenuClose}>Đăng Ký</MenuItem>
             </Link>
+            <Link to="/cart">
+              <MenuItem>Cart</MenuItem>
+            </Link>
           </>
         )}
 
@@ -293,34 +296,14 @@ export default function HideAppBar(props: Props) {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <Link to="/cart">
-        <MenuItem>
-          <IconButton
-            size="large"
-            aria-label="show 4 new mails"
-            color="inherit"
-          >
-            <Badge badgeContent={4} color="error">
-              <MailIcon />
-            </Badge>
-          </IconButton>
-          <p>Messages</p>
-        </MenuItem>
-      </Link>
-      <Link to="/cart">
-        <MenuItem>
-          <IconButton
-            size="large"
-            aria-label="show 4 new mails"
-            color="inherit"
-          >
-            <Badge badgeContent={4} color="error">
-              <MailIcon />
-            </Badge>
-          </IconButton>
-          <p>Messages</p>
-        </MenuItem>
-      </Link>
+      <MenuItem>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="error">
+            <MailIcon />
+          </Badge>
+        </IconButton>
+        <p>Messages</p>
+      </MenuItem>
       <MenuItem>
         <IconButton
           size="large"

@@ -1,0 +1,180 @@
+.my-voucher p {
+    font-size: 1.1rem;
+    color: gray;
+    font-family: sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    opacity: 0.8;
+}
+
+.my-voucher p a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.9;
+    padding-left: 5px;
+}
+
+.my-voucher-body {
+    border: 2px dashed #af7711;
+    margin-bottom: 2rem;
+}
+
+.my-voucher-body span {
+    font-size: 1.3rem;
+    opacity: 0.8;
+    font-family: sans-serif;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+}
+
+.my-voucher-body .voucher-input {
+    width: 90%;
+}
+
+.my-voucher-body .voucher-btn {
+    color: white;
+    font-weight: bold;
+    background: #dfa232;
+    opacity: 0.8;
+    width: 10%;
+    padding: 0.4rem;
+    border: navajowhite;
+}
+
+.my-voucher-body .voucher-btn:hover {
+    background: orangered;
+    color: white;
+}
+
+.modal-phone .modal-body input {
+    padding: 15px;
+}
+
+
+.modal-phone .modal-body .modal-body-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-phone .modal-body .btn-continue {
+    width: 45%;
+}
+
+.modal-title-payment {
+    text-decoration: none;
+}
+
+.my-payment .title-info {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    font-family: sans-serif;
+
+}
+
+.payment-infomation {
+    margin: 2rem 0px;
+}
+
+.payment-infomation span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    margin-left: 1rem;
+}
+
+.payment-infomation select {
+    width: 90%;
+    padding: 0.4rem;
+    margin: 8.1px 1.1rem;
+}
+
+.payment-infomation textarea {
+    height: 48px;
+    width: 100%;
+    margin: 0.5rem 1rem;
+    border: navajowhite;
+    outline: navajowhite;
+}
+
+.payment-product {
+    border: 2px solid orange;
+    margin-bottom: 2rem;
+}
+
+.payment-product .payment-product-body {
+    padding: 2rem;
+}
+
+.payment-product h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    font-family: sans-serif;
+}
+
+.payment-product .payment-product-body p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    opacity: 0.7;
+    margin: 0.5rem 0px;
+}
+
+.payment-product .payment-product-body .payment-temporary {
+    float: right;
+}
+
+.payment-product .payment-product-body b {
+    float: right;
+    line-height: 60px;
+}
+
+.payment-product .payment-product-body span {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    line-height: 54px;
+}
+
+.payment-bank ul li {
+    padding: 0.3rem;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    opacity: 0.9;
+    list-style-type: initial;
+}
+
+.payment-bank i {
+    padding: 0.5rem 1rem;
+}
+
+.payment-product-body .payment-checkbox input {
+    width: 10%;
+}
+
+.payment-product-body .payment-checkbox b {
+    float: none;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    margin: -0.3rem;
+}
+
+.payment-bank .payment-btn {
+    color: white;
+    font-weight: bold;
+    background: #dfa232;
+    opacity: 0.8;
+    border: navajowhite;
+    padding: 0.4rem;
+    margin: 0.1rem 0px;
+    width: 47%;
+}
+
+.payment-bank .payment-btn:hover {
+    background: orangered;
+}

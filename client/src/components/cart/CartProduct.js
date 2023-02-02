@@ -1,6 +1,7 @@
 import React from 'react';
 import { RiDeleteBin2Line } from 'react-icons/ri';
 import { AiFillTag } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 export const CartProduct = () => {
   return (
@@ -83,7 +84,9 @@ export const CartProduct = () => {
             <p className="sub-total">Tổng</p>
             <b className="sub-price">3,500,000₫</b>
             <hr />
-            <button className="sub-btn-cart">Tiến hành thanh toán</button>
+            <Link to="/payment">
+              <button className="sub-btn-cart">Tiến hành thanh toán</button>
+            </Link>
             <i className="voucher">
               <AiFillTag />
               <b className="sub-voucher">Phiếu giảm giá</b>
